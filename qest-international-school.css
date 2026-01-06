@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC&family=Noto+Serif+TC&family=M+PLUS+1p&family=Kosugi&display=swap');
+/* More Unique Display: */
+body{
+    margin:0;
+    background: #f5f7fa;
+    position: relative;
+}
+.school-name{
+    font-size:20px;
+    font-family: roboto;
+    font-weight:800;
+    color:blue;
+    text-transform: capitalize;
+    width:200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:10px
+}
+.header{
+    height:80px;
+    background: #f5f7fa;
+    padding-top:20px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid red;
+}
+.header-setting{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.div-img{
+    width:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.school-logo{
+    height:70px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-display{
+    display: flex;
+    gap:030px;
+    align-items: center;
+    margin-right: 120px;
+}
+.header-link{
+    font-size:20px;
+    font-family: roboto;
+    color:black;
+    text-transform: uppercase;
+    font-weight: 600;
+    position:relative;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100px;
+    margin:0;
+}
+.header-link:hover {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.header-link.active {
+    background-color: rgba(77, 171, 247, 0.2);
+    color: #387eb8;
+    padding:15px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100%;
+}
+.header-links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    width: 100%;
+}
+.header-link {
+    font-size: 20px;
+    font-family: roboto;
+    color: blue;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 15px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.header-link:hover {
+    background-color: rgba(17, 1, 1, 0.233);
+}
+.header-link-drop {
+    position: absolute;
+    top: 57px;
+    left: -95px;
+    overflow: hidden;
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    /* pointer-events: none; */
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.header-links:hover .header-link-drop,
+.header-link-drop:hover {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    padding:0;
+}
+.drop,
+.drop-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+    padding: 12px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.drop {
+    border-bottom: 2px solid #4dabf7;
+}
+.drop-li {
+    border-bottom: none;
+}
+.drop:hover,
+.drop-li:hover {
+    background-color: whitesmoke;
+}
+.drop-li:hover {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.toggle{
+    display:none;
+}
+.close-popout{
+    display: none;
+    font-family:cursive;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+
+
+@media(max-width:767px) {
+.header-link{
+    font-size: 18px;
+    color:white;
+}
+.header-link:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.header-link-pages {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+  z-index: 9999; 
+}
+.header-display{
+   display:flex;
+   flex-direction: column;
+   justify-content: start;
+   background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
+   position:absolute;
+   top:75px;
+   left:33%;
+   height:550px;
+   border-radius:10px ;
+   width:200px;
+   padding:15px 30px;
+   row-gap: 10px;
+   margin: 0;
+}
+.school-logo{
+    height:70px;
+    margin-top:-5px;
+}.div-img{
+    margin-left:50px;
+}
+.school-name{
+    font-size: 20px;
+    width: 500px;
+    font-weight:500
+}
+.toggle{
+    display:flex;
+    font-size:25px;
+    margin-right:30px;
+    color:black;
+    background-color: rgba(255, 255, 255, 0.1);
+    height:55px;
+    width:40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.close-popout{
+    display:flex;
+    position: absolute;
+    top:0;
+    left:84%;
+    color:white;
+    background-color:rgba(245, 245, 245, 0.116);
+    padding:10px 15px;
+    border-radius: 100%;
+}
+.header-link {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:200px;
+    overflow: hidden;
+}
+.header-links {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:200px;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1025px){
+    
+.header-link-pages{
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+    padding-left: 15%;
+    width: 100%;
+    margin-top: 0;
+    display: none;
+}
+.header-display{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    background: linear-gradient(135deg, #1a2a6c, #2a3a7c);
+    position:absolute;
+    top:70px;
+    left:60%;
+    height:550px;
+    border-radius:10px ;
+    width:200px;
+    padding:15px 30px;
+    row-gap: 10px;
+    margin: 0;
+}
+.school-logo{
+    height:65px;
+}
+.toggle{
+     display:flex;
+    font-size:25px;
+    margin-right:30px;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.1);
+    height:55px;
+    width:40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.close-popout{
+    display:block;
+    position: absolute;
+    top:0;
+    left:84%;
+    color:white;
+    background-color:rgba(245, 245, 245, 0.116);
+    padding:10px 15px;
+    border-radius: 100%;
+}
+.header-link:hover {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:100%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
